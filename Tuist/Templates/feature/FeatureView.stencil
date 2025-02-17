@@ -1,0 +1,11 @@
+
+import SwiftUI
+
+public struct {{ name }}View: View {
+    public init() { }
+    @StateObject var store: {{ name }}VM = .init()
+    
+    public var body: some View {
+        Text("{{ name }} feature")
+    }
+}
