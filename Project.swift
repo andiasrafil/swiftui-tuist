@@ -19,9 +19,8 @@ let project = Project(
             sources: ["swiftui-tuist/Sources/**"],
             resources: ["swiftui-tuist/Resources/**"],
             dependencies: [
-                .project(target: "DetailArticle", path: .relativeToCurrentFile("Feature/DetailArticle")),
-                .project(target: "ArticleList", path: .relativeToCurrentFile("Feature/ArticleList")),
-                .project(target: "KidKit", path: .relativeToCurrentFile("Feature/KidKit"))
+                .project(target: "Home", path: .relativeToCurrentFile("Feature/Home")),
+                .project(target: "DetailArticle", path: .relativeToCurrentFile("Feature/DetailArticle"))
             ]
         ),
         .target(

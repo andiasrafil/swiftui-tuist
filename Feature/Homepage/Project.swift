@@ -2,29 +2,27 @@
 import ProjectDescription
 
 let project = Project(
-    name: "DetailArticle",
+    name: "Homepage",
     targets: [
         .target(
-            name: "DetailArticle",
+            name: "Homepage",
             destinations: .iOS,
             product: .framework,
-            bundleId: "com.myapp.DetailArticle",
+            bundleId: "com.myapp.Homepage",
             sources: ["Sources/**"],
             resources: ["Resources/**"],
             dependencies: [
-                .project(target: "ShareArticle", path: "../ShareArticle"),
-                .project(target: "Tetopi", path: "../Tetopi"),
-                .project(target: "Bookmark", path: "../Bookmark"),
+                .project(target: "ArticleList", path: "../ArticleList"),
                 .project(target: "Subscription", path: "../Subscription")
             ]),
         .target(
-            name: "DetailArticleTests",
+            name: "HomepageTests",
             destinations: .iOS,
             product: .unitTests,
-            bundleId: "com.myapp.DetailArticleTests",
+            bundleId: "com.myapp.HomepageTests",
             sources: ["Tests/**"],
             dependencies: [
-                .target(name: "DetailArticle")
+                .target(name: "Homepage")
             ]),
     ]
 )
